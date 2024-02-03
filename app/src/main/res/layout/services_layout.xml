@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".services.ServiceFragment">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:textSize="26sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Services Fragment" />
+
+    <Button
+        android:id="@+id/fg_service_start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start FG Service"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fg_service_stop_button"/>
+
+    <Button
+        android:id="@+id/fg_service_stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop FG Service"
+        app:layout_constraintTop_toBottomOf="@id/fg_service_start_button"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/bg_service_start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start BG Service"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fg_service_start_button"
+        app:layout_constraintBottom_toTopOf="@id/bg_service_stop_button"/>
+
+    <Button
+        android:id="@+id/bg_service_stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop BG Service"
+        app:layout_constraintTop_toBottomOf="@id/bg_service_start_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fg_service_start_button" />
+
+    <Button
+        android:id="@+id/bound_service_start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Bound Service"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/fg_service_stop_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bound_service_stop_button"/>
+
+    <Button
+        android:id="@+id/bound_service_stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Bound Service"
+        app:layout_constraintTop_toBottomOf="@id/bound_service_start_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bound_service_bind_button"/>
+    <Button
+        android:id="@+id/bound_service_bind_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bind Bounded Service"
+        app:layout_constraintTop_toBottomOf="@id/bound_service_stop_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bound_service_unbind_button"/>
+
+    <Button
+        android:id="@+id/bound_service_unbind_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unbind Bounded Service"
+        app:layout_constraintTop_toBottomOf="@id/bound_service_bind_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bound_service_timer"/>
+
+    <TextView
+        android:id="@+id/bound_service_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bind service and Clickme"
+        app:layout_constraintTop_toBottomOf="@id/bound_service_unbind_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/intent_service_start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Intent Service"
+        app:layout_constraintTop_toTopOf="@id/bound_service_start_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bound_service_start_button"/>
+
+    <Button
+        android:id="@+id/intent_service_stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Intent Service"
+        app:layout_constraintTop_toBottomOf="@id/intent_service_start_button"
+        app:layout_constraintEnd_toEndOf="@id/intent_service_start_button"
+        app:layout_constraintStart_toStartOf="@id/intent_service_start_button"/>
+
+
+    <Button
+        android:id="@+id/aidl_service_bind_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bind AIDL Service"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/bound_service_timer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/aidl_service_unbind_button"/>
+
+    <Button
+        android:id="@+id/aidl_service_unbind_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unbind AIDL Service"
+        app:layout_constraintTop_toBottomOf="@id/aidl_service_bind_button"
+        app:layout_constraintEnd_toEndOf="@id/aidl_service_bind_button"
+        app:layout_constraintStart_toStartOf="@id/aidl_service_bind_button"/>
+
+    <TextView
+        android:id="@+id/aidl_service_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get AIDL value"
+        app:layout_constraintTop_toBottomOf="@id/aidl_service_unbind_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
